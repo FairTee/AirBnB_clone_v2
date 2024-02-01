@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-USER_GROUP='root:root'
 # Install Nginx if not already installed
 if [ ! -x "$(command -v nginx)" ]; then
     apt-get update
     apt-get -y install nginx
 fi
-
+USER_GROUP='root:root'
 # Create necessary directories
 mkdir -p /data/web_static/releases/test /data/web_static/shared
 
